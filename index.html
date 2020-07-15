@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+      <title>Quiz</title>
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+     body{
+         background-color:pink;
+         margin-left:3rem;
+         font-size:25px;
+
+         
+     }
+     .head{
+         text-align:center;
+         font-size:40px;
+         color:black;
+         font-weight: bolder;
+         padding-bottom: 40px;
+     }
+    #button{
+        background: #333;
+        color:#fff;
+        font-size:20px;
+    }
+
+
+     </style>
+
+
+</head>
+<body>
+<form name = "quiz" id = "quiz">
+    <p class ="head">Gear up for a simple quiz!</p>
+    <div>
+        <p>1.What is the capital of Australia?</p>
+        <p><input type ="radio" name = "question1" value ="Melbourne">A.Melbourne</p>
+        <p><input type ="radio" name = "question1" value ="Sydney">B.Sydney</p>
+        <p><input type ="radio" name = "question1" value ="Canberra">C.Canberra</p>
+        <p><input type ="radio" name = "question1" value ="Perth">D.Perth</p>
+    </div>
+    ******************************************************************************************
+    <div>
+        <p>2.Who is the author of The Oliver twist?</p>
+        <p><input type ="radio" name = "question2" value ="William Shakespeare">A.William Shakespeare</p>
+        <p><input type ="radio" name = "question2" value ="Charles Dickens">B.Charles Dickens</p>
+        <p><input type ="radio" name = "question2" value ="Stephen King">C.Stephen King</p>
+        <p><input type ="radio" name = "question2" value ="Mark Twain">D.Mark Twain</p>
+    </div>
+    ******************************************************************************************
+    <div>
+        <p>3.When did World-War-1 begun?</p>
+        <p><input type ="radio" name = "question3" value ="1911">A.1911</p>
+        <p><input type ="radio" name = "question3" value ="1912">B.1912</p>
+        <p><input type ="radio" name = "question3" value ="1913">C.1913</p>
+        <p><input type ="radio" name = "question3" value ="1914">D.1914</p>
+    </div>
+    ******************************************************************************************
+    <div>
+        <p>4.Which is the largest Continent?</p>
+        <p><input type ="radio" name = "question4" value ="Asia">A.Asia</p>
+        <p><input type ="radio" name = "question4" value ="Africa">B.Africa</p>
+        <p><input type ="radio" name = "question4" value ="Europe">C.Europe</p>
+        <p><input type ="radio" name = "question4" value ="Australia">D.Australia</p>
+    </div>
+    ******************************************************************************************
+    <div>
+        <p>5.What is the World Pandemic now?</p>
+        <p><input type ="radio" name = "question5" value ="Ebola">A.Ebola</p>
+        <p><input type ="radio" name = "question5" value ="Swine-flu">B.Swine-flu</p>
+        <p><input type ="radio" name = "question5" value ="Rabies">C.Rabies</p>
+        <p><input type ="radio" name = "question5" value ="COVID-19">D.COVID-19</p>
+    </div>
+    
+    
+    <input type ="button" name="" value="I'm Done!" id="button" onclick = "check()">
+</form>
+
+<script>
+function check(){
+    var c=0;
+    var q1 = document.quiz.question1.value;
+    var q2 = document.quiz.question2.value;
+    var q3 = document.quiz.question3.value;
+    var q4 = document.quiz.question4.value;
+    var q5 = document.quiz.question5.value;
+    var result= document.getElementById('result');
+    var quiz = document.getElementById("quiz");
+    
+
+    if (q1=="Canberra"){c++;}
+    if (q2=="Charles Dickens"){c++;}
+    if (q3=="1914"){c++;}
+    if (q4=="Asia"){c++;}
+    if (q5=="COVID-19"){c++;}
+    
+    
+    document.write("Your result is " );
+    document.write( c );
+    document.write("! Hope you enjoyed :)");
+    
+   
+}
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
